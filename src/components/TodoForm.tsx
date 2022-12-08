@@ -5,17 +5,17 @@ import { useState } from "react";
 import firebaseApp from "../firebase";
 import { getDatabase, ref, push } from "firebase/database";
 
-// To prevent empty input and to clear the input form on submit is more manual work than I have time
-// to figure out right now. Easiest would be to use a react hook library like the React Hook Form package
-
 const TodoForm = () => {
     const db = getDatabase(firebaseApp);
 
     const [title, setTitle] = useState("");
-    // const [inputText, setInputText] = useState("");
+    const [inputText, setInputText] = useState("");
 
+    // Method that fires any time the input box changes
+    // sets input value to the todo note title and saves to the inputText box
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setTitle(e.target.value);
+        setInputText(e.target.value);
     };
 
     // Method to add todo item to the todo list
@@ -28,12 +28,12 @@ const TodoForm = () => {
             done: false,
         };
         push(todoRef, todo);
-        // setInputText("");
+        setInputText("");
     };
 
     return (
         <form onSubmit={addTodo}>
-            <input type="text" name="name" onChange={handleChange} placeholder="Enter todo item" />
+            <input type="text" name="name" onChange={handleChange} placeholder="Enter todo item" value={inputText} />
             <input type="submit" value="Submit" />
         </form>
     )
