@@ -1,5 +1,4 @@
 .checkbox-wrapper {
-    /* background-color: turquoise; */
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -8,7 +7,6 @@
 }
 
 .checkbox-wrapper img {
-    /* width: 1.48vw; */
     width: 1.1rem;
 }
 

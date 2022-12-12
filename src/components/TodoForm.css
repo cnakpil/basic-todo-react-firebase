@@ -4,9 +4,6 @@ form {
 
 input[type="text"] {
     background-color: white;
-    /* flex-grow: 2;
-    background-color: white;
-    */
     border-radius: 2rem;
     padding: 10px;
     margin: 10px;
@@ -23,11 +20,3 @@ input[type="submit"] {
     border-radius: 2rem;
     padding: 10px;
 }
-
-/* .create {
-    border-radius: 15px;
-    margin: 10px;
-    background-color: #007a73;
-    color: white;
-    border: none;
-} */
