@@ -3,6 +3,8 @@ import { useState } from "react";
 
 // Import firebase configuration from firebase.ts file
 import firebaseApp from "../firebase";
+
+// Import firebase realtime database methods
 import { getDatabase, ref, push } from "firebase/database";
 
 const TodoForm = () => {
